@@ -37,7 +37,7 @@ public class EchoServer {
     public void onOpen(Session session){
         System.out.println(session.getId() + " has opened a connection"); 
         try {
-            session.getBasicRemote().sendText("Connection Established");
+            session.getBasicRemote().sendText("Connection Established. Session ID: " + session.getId());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -51,7 +51,7 @@ public class EchoServer {
     public void onMessage(String message, Session session){
         System.out.println("Message from " + session.getId() + ": " + message);
         try {
-            session.getBasicRemote().sendText(message);
+            session.getBasicRemote().sendText(message + ". Session ID: " + session.getId());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
