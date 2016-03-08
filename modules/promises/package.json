@@ -11,5 +11,8 @@
     "javascript"
   ],
   "author": "Yuriy Stul",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies":{
+	"q": ""
+  }
 }
