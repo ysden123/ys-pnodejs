@@ -1,3 +1,7 @@
+/**
+* Just to try something.
+**/
+
 function foo() {
   var a = 'a';
   a = a + 'b';
