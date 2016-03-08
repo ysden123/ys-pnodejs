@@ -12,7 +12,7 @@ console.log('r: ', r);
 // Using promise
 
 var success = true;
-var promise = new Promise1(function(resolve, reject) {
+var promise = new Promise(function(resolve, reject) {
   if (success) {
     resolve("Stuff worked!");
   } else {
@@ -27,7 +27,7 @@ promise.then(function(result) {
 });
 
 success = false;
-promise = new Promise2(function(resolve, reject) {
+promise = new Promise(function(resolve, reject) {
   if (success) {
     resolve("Stuff worked!");
   } else {
