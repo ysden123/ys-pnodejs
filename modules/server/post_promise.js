@@ -45,8 +45,14 @@ var data = qs.stringify({
   'param22': 'value 22',
 });
 
+console.log('Attempt 1');
 post(options, data)
   .then(
     response => console.log(`Result: %s`, JSON.stringify(response)),
     error => console.log(`Error: %s`, JSON.stringify(error))
   );
+
+console.log('Attempt 2');
+post(options, data)
+  .then(response => console.log(`Result: %s`, JSON.stringify(response)))
+  .catch(error => console.log(`Error: %s`, JSON.stringify(error)));
