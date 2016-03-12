@@ -1,10 +1,9 @@
 // Working with Bing, POC
 'use strict';
-
 var testOptions = {
   getBingAccessTokenResolve: true,
   getReportResolve: true,
-  saveReportResolve: false,
+  saveReportResolve: true,
 };
 
 function getBingAccessToken(credentials) {
