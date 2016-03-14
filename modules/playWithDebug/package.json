@@ -1,0 +1,19 @@
+{
+  "name": "playWithDebug",
+  "version": "1.0.0",
+  "description": "Playing with 'promise'",
+  "main": "app_promise",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "debug",
+    "javascript"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "dependencies":{
+	"debug": ""
+  }
+}
