@@ -1,6 +1,6 @@
 {
   "name": "multi_api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Playing with multi functions and promise",
   "main": "app_multi_api.js",
   "scripts": {
