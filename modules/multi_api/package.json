@@ -1,18 +1,22 @@
 {
-  "name": "debug",
+  "name": "multi_api",
   "version": "1.0.0",
-  "description": "Playing with 'promise'",
-  "main": "app_promise",
+  "description": "Playing with multi functions and promise",
+  "main": "app_multi_api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "multiple",
     "promise",
-    "javascript"
+    "chain",
+    "function",
+    "method",
+    "api"
   ],
   "author": "Yuriy Stul",
   "license": "MIT",
   "dependencies":{
-	"q": ""
+	   "debug": ""
   }
 }
