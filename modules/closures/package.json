@@ -1,0 +1,15 @@
+{
+  "name": "closures",
+  "version": "1.0.0",
+  "description": "Playing with closures",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "closure",
+    "play"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
