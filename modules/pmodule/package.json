@@ -1,0 +1,16 @@
+{
+  "name": "pmodule",
+  "version": "1.0.0",
+  "description": "Playing with module and exports",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "module",
+    "exports",
+    "playing"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
