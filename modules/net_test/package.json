@@ -1,0 +1,21 @@
+{
+  "name": "net_test",
+  "version": "1.0.0",
+  "description": "Playing with net",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "net",
+    "playing",
+    "test",
+    "study"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "dependencies": {
+      "q":"",
+      "debug":""
+  }
+}
