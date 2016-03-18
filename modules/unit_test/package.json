@@ -1,0 +1,18 @@
+{
+  "name": "unit_test",
+  "version": "1.0.0",
+  "description": "Playing with uni testing.",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "unit",
+    "test",
+    "playing"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

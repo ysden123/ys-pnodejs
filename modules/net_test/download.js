@@ -14,7 +14,7 @@ function downloadFile(url, fileName) {
     }
 
     var chunkN = 0;
-    http.get(url, function(res) {
+    var get = http.get(url, function(res) {
         console.log('Reading data...');
         res.on('data', function(chunk) {
             ++chunkN;
@@ -30,6 +30,10 @@ function downloadFile(url, fileName) {
         res.on('error', function(error) {
             deferred.reject(error);
         });
+    });
+
+    get.on('error', function(error) {
+        deferred.reject(error);
     });
     return promise;
 }
