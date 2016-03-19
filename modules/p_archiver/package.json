@@ -1,7 +1,7 @@
 {
-    "name": "p_adm_zip",
+    "name": "p_archiver",
     "version": "1.0.0",
-    "description": "Playing with ADM-ZIP",
+    "description": "node-archiver (https://github.com/archiverjs/node-archiver)",
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,11 +9,12 @@
     "keywords": [
         "zip",
         "unzip",
-        "adm"
+        "archiver"
     ],
     "author": "Yuriy Stul",
     "license": "MIT",
     "dependencies": {
-        "archiver": ""
+        "archiver": "",
+        "q":""
     }
 }

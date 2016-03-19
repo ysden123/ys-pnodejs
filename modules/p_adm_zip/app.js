@@ -1,19 +1,28 @@
 // Playing with ZIP files. The use ADN-ZIP.
 'use strict';
 var fs = require('fs');
-var AdmZip = require('adm-zip');
+var archiver = require('archiver');
 
 // Create a file to zip.
 fs.writeFileSync('test.txt', 'The test text for zip/unzip tests.');
 
-// Create zip file.
-var zip = new AdmZip();
-// add local file
-// zip.addLocalFile(/*local path*/'test.txt', /*zip path*/null, /*zipname*/'zip_name.txt');
-// zip.addLocalFile(/*local path*/'test.txt');
-zip.addFile("test22.txt", new Buffer("inner content of the file"), "entry comment goes here");
-	// add local file 
-// Write to disk
-zip.writeZip('test.zip');
+// var inputStream = fs.createReadStream('test.txt');
+var archive = archiver.create('zip');
+
+var output = fs.createWriteStream('test.zip')
+    .on('close', () => {
+        console.log(archive.pointer() + ' total bytes');
+        console.log('archiver has been finalized and the output file descriptor has closed.');
+    });
+
+archive.on('error', (err) => {
+    console.error(err);
+});
+
+archive.pipe(output);
+
+archive
+.append(fs.createReadStream('test.txt'), { name: 'test.txt' })
+.finalize();
 
 console.log('Done');
