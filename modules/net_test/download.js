@@ -16,20 +16,21 @@ function downloadFile(url, fileName) {
     var chunkN = 0;
     var get = http.get(url, function(res) {
         console.log('Reading data...');
-        res.on('data', function(chunk) {
-            ++chunkN;
-            fs.appendFileSync(fileName, chunk);
-        });
-        res.on('end', function() {
-            if (res.statusCode == 200) {
-                deferred.resolve('Done. Number of chunks is ' + chunkN);
-            } else {
-                deferred.reject(new Error('Error. Status code ' + http.STATUS_CODES[res.statusCode]));
-            }
-        });
-        res.on('error', function(error) {
-            deferred.reject(error);
-        });
+        res
+            .on('data', function(chunk) {
+                ++chunkN;
+                fs.appendFileSync(fileName, chunk);
+            })
+            .on('end', function() {
+                if (res.statusCode == 200) {
+                    deferred.resolve('Done. Number of chunks is ' + chunkN);
+                } else {
+                    deferred.reject(new Error('Error. Status code ' + http.STATUS_CODES[res.statusCode]));
+                }
+            })
+            .on('error', function(error) {
+                deferred.reject(error);
+            });
     });
 
     get.on('error', function(error) {
@@ -47,8 +48,9 @@ console.log('Starting...');
 //     .catch(function(err) {
 //         console.error(err.message);
 //     });
-console.log('Get from "http://download.thinkbroadband.com/5MB.zip"');
-downloadFile('http://download.thinkbroadband.com/5MB.zip', '5MB.zip')
+var url = 'http://download.thinkbroadband.com/5MB.zip';
+console.log('Get from', url);
+downloadFile(url, '5MB.zip')
     .then(function(res) {
         console.log(res);
     })
