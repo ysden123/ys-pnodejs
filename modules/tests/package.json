@@ -1,0 +1,15 @@
+{
+  "name": "node-tests",
+  "version": "1.0.0",
+  "description": "Tests with NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "node.js"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
