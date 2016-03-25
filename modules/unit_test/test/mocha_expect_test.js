@@ -1,9 +1,10 @@
-// Unit tests for module api
+// Unut tests by mocha with chai.should
+'use strict';
 var chai = require('chai');
 var expect = chai.expect;
 var api = require('../api');
 
-describe('api', () => {
+describe('api (assert with expect)', () => {
     it('f1(3) should return 6', () => {
         expect(api.f1(3)).to.equal(6);
     });
@@ -20,7 +21,7 @@ describe('api', () => {
             })
             .catch((error) => {
                 assert.fail(error);
-                done();
+                done(error);
             });
     });
 });
