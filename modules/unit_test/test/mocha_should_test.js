@@ -13,6 +13,7 @@ describe('api (assert with should)', function() {
         api.f2()
             .then((result) => {
                 result.should.equal('done');
+                done();
             })
             .catch((error) => {
                 done(error);
