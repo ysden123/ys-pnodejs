@@ -1,17 +1,17 @@
-// Download a file for ystest...
+// Download a file for ben...
 'use strict';
 
 var fs = require('fs');
 var readline = require('readline');
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
-var fileId = '19khklF7tFgLnRE-mDcnqHiqA41bKyKAWgihb9mrDOe4';
-var dest = fs.createWriteStream('c:/work/ystest_test.csv');
+var fileId = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+var dest = fs.createWriteStream('c:/work/ben_test.csv');
 
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/drive-nodejs-quickstart.json
 var SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
-var TOKEN_PATH = 'ystest_token.json';
+var TOKEN_PATH = 'ben_token.json';
 
 console.log(`TOKEN_PATH: %s`, TOKEN_PATH);
 
