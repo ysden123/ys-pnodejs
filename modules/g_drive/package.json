@@ -1,0 +1,21 @@
+{
+  "name": "g_drive",
+  "version": "1.0.0",
+  "description": "Playing with Google Drive API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playing",
+    "google",
+    "drive",
+    "api"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "dependencies": {
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^4.0.0"
+  }
+}
