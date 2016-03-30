@@ -1,0 +1,19 @@
+{
+    "name": "pexports",
+    "version": "1.0.0",
+    "description": "Playing with module and exports",
+    "main": "./lib",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "module",
+        "exports",
+        "playing"
+    ],
+    "author": "Yuriy Stul",
+    "license": "MIT",
+    "devDependencies": {
+        "chai": "^3.5.0"
+    }
+}
