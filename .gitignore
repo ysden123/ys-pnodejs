@@ -37,3 +37,5 @@ node_modules
 /modules/g_drive/ys_token.json
 /modules/g_drive/ystest_token.json
 /modules/g_drive/ben_token.json
+/modules/p_adm_zip/test.txt
+/modules/p_adm_zip/test.zip
