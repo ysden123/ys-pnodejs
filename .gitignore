@@ -33,3 +33,7 @@ node_modules
 .node_repl_history
 /build/
 /modules/net_test/5MB.zip
+/modules/g_drive/client_secret.json
+/modules/g_drive/ys_token.json
+/modules/g_drive/ystest_token.json
+/modules/g_drive/ben_token.json
