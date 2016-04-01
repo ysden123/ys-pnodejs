@@ -27,9 +27,3 @@ Downloader.prototype.download = function(url) {
 }
 
 exports.Downloader = Downloader;
-// module.exports = Downloader;
-
-// test
-var d = new Downloader();
-console.log(d);
-d.download('UUURRRLLL');
