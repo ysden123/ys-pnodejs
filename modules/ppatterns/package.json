@@ -1,0 +1,17 @@
+{
+  "name": "ppatterns",
+  "version": "1.0.0",
+  "description": "Playing with patterns",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playing",
+    "pattern",
+    "javascript",
+    "node.js"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
