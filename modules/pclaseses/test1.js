@@ -18,3 +18,4 @@ util.inherits(ChildClass, ParentClass);
 
 var obj = new ChildClass('Hello', 'World');
 console.dir({ obj: obj });
+
