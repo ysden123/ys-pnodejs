@@ -1,6 +1,6 @@
 {
     "name": "p_archiver",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "node-archiver (https://github.com/archiverjs/node-archiver)",
     "main": "app.js",
     "scripts": {
@@ -14,7 +14,6 @@
     "author": "Yuriy Stul",
     "license": "MIT",
     "dependencies": {
-        "archiver": "",
-        "q":""
+        "archiver": ""
     }
 }
