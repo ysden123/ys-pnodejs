@@ -34,46 +34,42 @@ var server = http.createServer((req, res) => {
 
 function handleA1(res) {
     let start = new Date();
-    console.log('Handling a1');
-    longProcess(1).then(() => {
-        let end = new Date();
-        let duration = (end - start);
-        res.write('Handled a1. Duration is ' + duration + ' msec.');
-        res.end();
-        console.log('Handled a1');
+    longProcess(1, res).then(() => {
     });
 }
 
 function handleA2(res) {
     let start = new Date();
-    console.log('Handling a2');
-    longProcess(2).then(() => {
-        let end = new Date();
-        let duration = (end - start);
-        res.write('Handled a2. Duration is ' + duration + ' msec.');
-        res.end();
-        console.log('Handled a2');
+    longProcess(2, res).then(() => {
     });
 }
 
 function handleA3(res) {
     let start = new Date();
-    console.log('Handling a3');
-    longProcess(3).then(() => {
-        let end = new Date();
-        let duration = (end - start);
-        res.write('Handled a3. Duration is ' + duration + ' msec.');
-        res.end();
-        console.log('Handled a3');
+    longProcess(3, res).then(() => {
     });
 }
 
-function longProcess(n) {
+function longProcess(n, res) {
     let promise = new Promise((resolve, reject) => {
+        console.log('Handling a' + n);
+        let start = new Date();
         let count = 0;
         let io = setInterval(() => {
             if (++count > 10) {
                 clearInterval(io);
+                let end = new Date();
+                let duration = (end - start);
+                
+                res.write('<html><body>');
+                res.write('Handled a' + n + '</br>');
+                res.write('Started: ' + start + '</br>');
+                res.write('Finished: ' + end + '</br>');
+                res.write(' Duration is ' + duration + ' msec.</br>');
+                res.write('</body></html>');
+                res.end();
+                
+                console.log('Handled a' + n);
                 resolve();
             } else {
                 for (let i = 1; i <= 1000; ++i) {
