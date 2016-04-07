@@ -39,3 +39,5 @@ node_modules
 /modules/g_drive/ben_token.json
 /modules/p_adm_zip/test.txt
 /modules/p_adm_zip/test.zip
+test.txt
+test.zip
