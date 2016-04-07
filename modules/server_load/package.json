@@ -1,0 +1,16 @@
+{
+  "name": "server_load",
+  "version": "1.0.0",
+  "description": "Playing with server load",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "load",
+    "playing"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
