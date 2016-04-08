@@ -76,7 +76,7 @@ function longProcess(n, res) {
                     fs.writeFileSync('d:/work/test' + n + '.txt', fs.readFileSync(path.join(__dirname, 'index.html')));
                 }
             }
-        }, 1000);
+        }, 50);
     });
     return promise;
 
