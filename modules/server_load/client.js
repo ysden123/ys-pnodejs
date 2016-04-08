@@ -27,13 +27,13 @@ function get(n) {
 let start = new Date();
 console.log('Start');
 console.log();
-let requests = new Array(5);
+let ids = new Array(3);
 
 for (let i = 1; i <= 3; ++i) {
-    requests.push(get(i));
+    ids.push(i);
 }
 
-Promise.all(requests)
+Promise.all(ids.map(get))
     .then(() => {
         let finish = new Date();
         console.log();
