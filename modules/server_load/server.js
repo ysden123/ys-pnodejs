@@ -5,6 +5,7 @@ var qs = require('querystring');
 var util = require('util');
 var fs = require('fs');
 var path = require('path');
+var os = require('os');
 
 var server = http.createServer((req, res) => {
     console.log('request starting');
@@ -73,7 +74,8 @@ function longProcess(n, res) {
                 resolve();
             } else {
                 for (let i = 1; i <= 1000; ++i) {
-                    fs.writeFileSync('d:/work/test' + n + '.txt', fs.readFileSync(path.join(__dirname, 'index.html')));
+                    let fn = path.join(os.tmpdir(), 'test' + n + '.txt');
+                    fs.writeFileSync(fn, fs.readFileSync(path.join(__dirname, 'index.html')));
                 }
             }
         }, 50);
