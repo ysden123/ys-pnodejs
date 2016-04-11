@@ -1,0 +1,15 @@
+{
+  "name": "psocket",
+  "version": "1.0.0",
+  "description": "Playing with socket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket",
+    "playing"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC"
+}
