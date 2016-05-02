@@ -1,4 +1,5 @@
 // Using "spread operator"" feature
+// !!! Working for NodeJS 6.0.0+
 'use strict';
 
 function myFunction(a, b, c) {
