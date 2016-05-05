@@ -1,0 +1,15 @@
+{
+  "name": "pstream",
+  "version": "1.0.0",
+  "description": "Playing with streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playing",
+    "stream"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC"
+}
