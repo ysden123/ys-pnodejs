@@ -1,0 +1,17 @@
+{
+  "name": "psimple_logger",
+  "version": "1.0.0",
+  "description": "Playing with \"simple-node-logger\"",
+  "main": "index.js",
+  "keywords": [
+    "playing",
+    "simple",
+    "logger",
+    "node"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "dependencies": {
+    "simple-node-logger":""
+  }
+}
