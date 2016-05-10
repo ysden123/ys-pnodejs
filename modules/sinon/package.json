@@ -1,0 +1,25 @@
+{
+  "name": "sinon",
+  "version": "1.0.0",
+  "description": "Playing with sinon",
+  "main": "./lib",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "sinon",
+    "play",
+    "mock",
+    "unit",
+    "test"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "dependencies": {
+    "sinon":"",
+    "simple-node-logger":""
+  },
+  "devDependencies": {
+    "chai":""
+  }
+}
