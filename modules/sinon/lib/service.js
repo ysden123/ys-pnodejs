@@ -8,7 +8,13 @@ function useSave() {
     logger.debug('==>useSave');
     db.save('data to save');
 }
+function useGet(index) {
+    logger.debug('==>useGet');
+    logger.debug(`result from DB: ${db.get(index)}`);
+    return db.get(index);
+}
 
 module.exports = {
-    useSave: useSave
+    useSave: useSave,
+    useGet: useGet
 }
