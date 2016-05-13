@@ -1,0 +1,22 @@
+{
+  "name": "prewire",
+  "version": "1.0.0",
+  "description": "Playing with \"rewire\" package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rewire",
+    "mock",
+    "play",
+    "test",
+    "unit"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "dependencies": {
+    "rewire":"",
+    "simple-node-logger":""
+  }
+}
