@@ -1,4 +1,4 @@
-// Checking what exception will be printed
+// Checking a what exception will be printed
 'use strict';
 
 ////////////////////////////////////////////////
