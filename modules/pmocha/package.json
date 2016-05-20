@@ -1,0 +1,20 @@
+{
+  "name": "pmocha",
+  "version": "1.0.0",
+  "description": "Playing with mocha",
+  "main": "./lib",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "mocha",
+    "playing",
+    "unit",
+    "test"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": ""
+  }
+}
