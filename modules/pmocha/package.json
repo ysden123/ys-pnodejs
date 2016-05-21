@@ -15,6 +15,7 @@
   "author": "Yuriy Stul",
   "license": "ISC",
   "devDependencies": {
-    "chai": ""
+    "chai": "",
+    "xunit-file": "0.0.9"
   }
 }
