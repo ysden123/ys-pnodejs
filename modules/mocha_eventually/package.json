@@ -1,0 +1,19 @@
+{
+  "name": "mocha_eventually",
+  "version": "1.0.0",
+  "description": "Playing with mocha eventually",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "playing",
+    "mocha",
+    "eventually"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": ""
+  }
+}
