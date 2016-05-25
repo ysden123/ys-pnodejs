@@ -4,7 +4,7 @@
   "description": "Playing with mocha",
   "main": "./lib",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha -R xunit-file test"
   },
   "keywords": [
     "mocha",
@@ -15,7 +15,6 @@
   "author": "Yuriy Stul",
   "license": "ISC",
   "devDependencies": {
-    "chai": "",
-    "xunit-file": "0.0.9"
+    "chai": ""
   }
 }
