@@ -25,22 +25,24 @@ const bucket = riak.bucket('multiple objects');
 
 let keys = generateKeys(3);
 
-logger.info('Reading data...');
+logger.info('Reading data, object by object...');
 keys.forEach(key => {
     bucket.objects.get(key, (err, obj) => {
         if (err) {
             logger.error(err);
         } else {
             logger.info(obj.data);
-            // console.log(obj);
         }
     });
 });
-// bucket.objects.get(keys, (err, obj) => {
-//     if (err) {
-//         logger.error(err);
-//     } else {
-//         logger.info(obj.data);
-//         // console.log(obj);
-//     }
-// });
+
+logger.info('Reading data, all objects for spcified keys...');
+bucket.objects.get(keys, (err, objects) => {
+    if (err) {
+        logger.error(err);
+    } else {
+        objects.forEach(obj => {
+            logger.info(obj.data);
+        });
+    }
+});
