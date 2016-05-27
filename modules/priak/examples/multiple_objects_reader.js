@@ -36,7 +36,7 @@ keys.forEach(key => {
     });
 });
 
-logger.info('Reading data, all objects for spcified keys...');
+logger.info('Reading data, all objects for specified keys...');
 bucket.objects.get(keys, (err, objects) => {
     if (err) {
         logger.error(err);
@@ -46,3 +46,15 @@ bucket.objects.get(keys, (err, objects) => {
         });
     }
 });
+
+logger.info('Streamed reading data, all objects for specified keys...');
+bucket.objects.get(keys).stream()
+    .on('data', obj => {
+        logger.info(obj.data);
+    })
+    .on('error', err => {
+        logger.error(err);
+    })
+    .on('end', () => {
+        logger.info('Completed streamed reading.')
+    })
