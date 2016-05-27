@@ -1,0 +1,24 @@
+{
+  "name": "priak",
+  "version": "1.0.0",
+  "description": "Playing with riak",
+  "main": "./lib",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "riak",
+    "nodiak",
+    "database",
+    "nodejs"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "dependencies": {
+    "nodiak": "^0.4.4",
+    "simple-node-logger": ""
+  },
+  "devDependencies": {
+    "chai": ""
+  }
+}
