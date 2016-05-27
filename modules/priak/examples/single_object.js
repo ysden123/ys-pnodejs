@@ -1,10 +1,10 @@
-// Manipulations with simple objects
+// Manipulations with single object
 'use strict';
 
 const conf = require('../conf/config').conf;
 const nodiak = require('nodiak');
 const manager = require('simple-node-logger').createLogManager();
-const logger = manager.createLogger('[simpleobjs]');
+const logger = manager.createLogger('[single_object]');
 const util = require('util');
 
 const riak = nodiak.getClient(conf.riak.backend, conf.riak.host, conf.riak.port);
@@ -19,7 +19,7 @@ const origObjects = [
 const bucket = riak.bucket('simple objects');
 
 // Create new objects
-const key = 'simple objects 1';
+const key = 'single object';
 const obj = bucket.object.new(key, origObjects);
 
 // Save in db
