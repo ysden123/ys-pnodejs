@@ -1,9 +1,19 @@
 <html>
-    <body>
-        <a href="http://33.33.33.10:8098/buckets?buckets=true" target="_blank">List all buckets</a>
-        <br/>
-        <a href="http://33.33.33.10:8098/buckets/multiple objects/keys?keys=true" target="_blank">List all keys for multiple objects</a>
-        <br/>
-        <a href="http://33.33.33.10:8098/buckets/multiple objects p/keys?keys=true" target="_blank">List all keys for multiple objects with promise</a>
-    </body>
+
+<head>
+    <script src="check.js" type="text/javascript"></script>
+</head>
+
+<body>
+    Host: &nbsp; <input id='host' type="text" value="33.33.33.10" />
+    &nbsp; <input type="button" value="Set" onclick="update()" />
+    <br/>
+    <a id="a1" href="http://33.33.33.10:8098/buckets?buckets=true" target="_blank">List
+    all buckets
+    </a>
+    <br/>
+    <a id="a2" href="http://33.33.33.10:8098/buckets/multiple objects/keys?keys=true" target="_blank">List all keys for multiple objects</a>
+    <br/>
+    <a id="a3" href="http://33.33.33.10:8098/buckets/multiple objects p/keys?keys=true" target="_blank">List all keys for multiple objects with promise</a>
+</body>
 </html
