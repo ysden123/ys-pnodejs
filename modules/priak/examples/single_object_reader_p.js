@@ -3,7 +3,7 @@
 
 const conf = require('../conf/config').conf;
 const manager = require('simple-node-logger').createLogManager();
-const logger = manager.createLogger('[connects]');
+const logger = manager.createLogger('[single_object_reader_p]');
 
 const Client = require('riaks');
 const client = new Client({
