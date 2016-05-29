@@ -1,0 +1,27 @@
+{
+  "name": "pcucumber",
+  "version": "1.0.0",
+  "description": "Playing with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "keywords": [
+    "cucumber",
+    "nodejs"
+  ],
+  "author": "Yuriy Stul",
+  "contributors": [
+    {
+      "name": "Lally Elias",
+      "email": "lallyelias87@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
