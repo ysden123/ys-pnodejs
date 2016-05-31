@@ -7,7 +7,7 @@ for (let i = 1; i <= 3; ++i) {
         setTimeout(() => {
             console.log(`a1 i=${i}`);
             resolve();
-        }, 500);
+        }, 100 * (4 - i));
     }))
 }
 
@@ -22,7 +22,7 @@ Promise
                 setTimeout(() => {
                     console.log(`a2 i=${i}`);
                     resolve();
-                }, 100);
+                }, 90 * (4 - i));
             }))
         }
         return Promise.all(a2);
