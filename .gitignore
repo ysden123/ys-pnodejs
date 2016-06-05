@@ -42,3 +42,6 @@ node_modules
 test.txt
 test.zip
 /.vscode
+modules/big_data/datas.json
+modules/big_data/datas2.json
+datas.json
