@@ -12,7 +12,8 @@
   ],
   "author": "Yuriy Stul",
   "license": "MIT",
-  "dependencies":{
-	"q": ""
+  "dependencies": {
+    "q": "",
+    "semaphore": ""
   }
 }

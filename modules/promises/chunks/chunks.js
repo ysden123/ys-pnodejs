@@ -2,27 +2,33 @@
 
 'use strict';
 
+let amount = 10;
+const semaphore = require('semaphore')(4);
+
 function job(i) {
+    console.log(`job(${i})`);
+    console.log(`semaphore.current = ${semaphore.current}`);
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log(`job(${i})`);
             resolve();
-        }, 500);
+        }, (amount - i) * 250);
     });
 }
 
-let chunkStep = 3;
-let amount = 10;
-
 function exec() {
+
     return new Promise((resolve, reject) => {
-        for (let iChunk = 0; iChunk < amount; iChunk = iChunk + chunkStep) {
-            let jobs = [];
-            for (let i = iChunk; i < (iChunk + chunkStep) && i < amount; ++i) {
-                jobs.push(job(i));
-            }
-            Promise.all(jobs)
-                .then(() => resolve());
+        let counter = 0;
+        for (let i = 0; i < amount; ++i) {
+            semaphore.take(() => {
+                job(i)
+                    .then(() => {
+                        semaphore.leave();
+                        if (++counter == amount) {
+                            resolve();
+                        }
+                    });
+            });
         }
     })
 }
