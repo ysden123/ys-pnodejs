@@ -17,6 +17,7 @@
   "author": "Yuriy Stul",
   "license": "ISC",
   "dependencies": {
+    "basho-riak-client": "^2.1.2",
     "nodiak": "^0.4.4",
     "riaks": "^2.1.1",
     "simple-node-logger": ""
