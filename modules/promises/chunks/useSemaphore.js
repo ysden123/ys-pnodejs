@@ -3,7 +3,7 @@
 const amount = 10000;
 // const amount = 353;
 // const amount = 1;
-const semaphore = require('semaphore')(1);
+const semaphore = require('semaphore')(10);
 
 let counter = 0;
 const step = 100;
