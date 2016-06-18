@@ -13,6 +13,7 @@
   "author": "Yuriy Stul",
   "license": "MIT",
   "dependencies": {
+    "lazy-promise": "^3.0.1",
     "q": "",
     "semaphore": ""
   }
