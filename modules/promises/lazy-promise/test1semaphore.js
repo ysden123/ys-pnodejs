@@ -10,7 +10,6 @@ function job(i) {
                 console.log(`i=${i}`);
                 semaphore.leave();
                 resolve();
-                // }, 100 + (i % 2) * 250);
             }, 100 + Math.random() * 1000);
         })
     })
