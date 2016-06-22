@@ -1,13 +1,11 @@
 'use strict';
 
-// Include the async package 
-// Make sure you add "async" to your package.json 
 const async = require('async');
 const job = require('./job');
 
 const items = [];
 for (let i = 1; i <= 10; ++i) {
-    items.push(job.job(i));
+    items.push(i);
 }
 
 function exec() {
@@ -16,11 +14,11 @@ function exec() {
         async.each(items,
             // 2nd param is the function that each item is passed to 
             function(item, callback) {
-                item()
+                job.job(item)
                     .then(() => {
                         callback();
                     })
-                    .catch(err => call(err));
+                    .catch(err => callback(err));
             },
             function(err) {
                 // All tasks are done now 
@@ -31,6 +29,8 @@ function exec() {
 }
 
 console.time('exec');
-exec().then(() => {
-    console.timeEnd('exec');
-});
+exec()
+    .then(() => {
+        console.timeEnd('exec');
+    })
+    .catch(err => console.error(err));
