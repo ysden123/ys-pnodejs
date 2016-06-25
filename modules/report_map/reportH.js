@@ -86,6 +86,23 @@ function buildReport(file, append) {
             });
     }
 
+    function freeResources() {
+        try {
+            if (writer)
+                writer.close();
+        }
+        catch (err) {
+            console.error('Failed close writer.', err);
+        }
+        try {
+            if (client)
+                client.shutdown();
+        }
+        catch (err) {
+            console.error('Failed close Hazelcast client.', err);
+        }
+    }
+
     return new Promise((resolve, rejct) => {
         getHazelClient()
             .then(client => {
@@ -110,15 +127,11 @@ function buildReport(file, append) {
                 })
             })
             .then(() => {
-                writer.close();
-                client.shutdown();
+                freeResources();
                 resolve();
             })
             .catch(err => {
-                if (writer)
-                    writer.close();
-                if (client)
-                    client.shutdown();
+                freeResources();
                 reject(err);
             })
     })
