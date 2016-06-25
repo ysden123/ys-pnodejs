@@ -45,3 +45,8 @@ test.zip
 modules/big_data/datas.json
 modules/big_data/datas2.json
 datas.json
+modules/report_map/cache.dat
+modules/report_map/data1.txt
+modules/report_map/data2.txt
+modules/report_map/data3.txt
+modules/report_map/report.csv

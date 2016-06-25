@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ysden123/ys-pnodejs/issues"
   },
+  "dependencies": {
+    "hazelcast-client": "^0.3.0",
+    "async": "^2.0.0-rc.6"
+  },
   "homepage": "https://github.com/ysden123/ys-pnodejs#readme"
 }
