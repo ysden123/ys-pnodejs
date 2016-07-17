@@ -1,2 +1,2 @@
 'use strict'
-console.log('Just release test script 222');
+console.log('Just release test script 22');
