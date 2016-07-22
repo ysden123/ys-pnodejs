@@ -1,0 +1,20 @@
+{
+  "name": "pnock",
+  "version": "1.0.0",
+  "description": "Playing with HTTP mocking nock module",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "mock",
+    "nock",
+    "http"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "nock": "^8.0.0"
+  }
+}
