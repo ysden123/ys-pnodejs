@@ -2,19 +2,17 @@
 
 const http = require('http');
 
-function getGoogle() {
-    // http.get('http://www.google.com/index.html', (res) => {
+function getGoogle(callback) {
     http.get('http://www.google.com', (res) => {
-        console.log(`Got response: ${res.statusCode}`);
         // consume response body
-        console.log(`STATUS: ${res.statusCode}`);
-        console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
         res.setEncoding('utf8');
+        let body = '';
         res.on('data', (chunk) => {
-            console.log(`BODY: ${chunk}`);
+            body +=chunk;
         });
         res.on('end', () => {
-            console.log('No more data in response.')
+            callback({ statusCode: res.statusCode, headers: res.headers, body: body });
+            return;
         })
         res.resume();
     }).on('error', (e) => {
@@ -22,4 +20,10 @@ function getGoogle() {
     });
 }
 
-getGoogle();
+getGoogle((r) => {
+    console.log({ r_statusCode: r.statusCode, r_headers: r.headers, r_body: r.body });
+});
+
+module.exports={
+    getGoogle:getGoogle
+}
