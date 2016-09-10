@@ -20,13 +20,13 @@ var Downloader = function() {
         setTimeout(() => {
             console.log('Emit start event.');
             // Emit 'start' event
-            self.emit('start', url);
+            self.emit('start', url, new Date());
         }, 0);
 
         setTimeout(() => {
             console.log('Emit end event.');
             // Emit 'end' event
-            self.emit('end', url);
+            self.emit('end', url, new Date());
         }, 3000);
     }
 };

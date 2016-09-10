@@ -6,17 +6,17 @@ const Downloader = new require('./..').Downloader3;
  */
 describe('Downloader', function () {
     describe('#download', function () {
-        it('should emulate downloading', function(done){
+        it('should emulate downloading', function (done) {
             this.timeout(4000);
             let wasStarted = false;
 
             let downloader = new Downloader()
-                .on('start', d =>{
-                    console.log('on start:', d);
+                .on('start', (url, time) => {
+                    console.log(`on start: url is ${url}, time is ${time}.`);
                     wasStarted = true;
                 })
-                .on('end', d =>{
-                    console.log('on end:', d);
+                .on('end', (url, time) => {
+                    console.log(`on end: url is ${url}, time is ${time}.`);
                     if (wasStarted) {
                         done();
                     } else {
