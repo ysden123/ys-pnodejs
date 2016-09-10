@@ -1,0 +1,17 @@
+{
+  "name": "psocket.io",
+  "version": "1.0.0",
+  "description": "Playing with Socket.IO",
+  "scripts": {
+  },
+  "keywords": [
+    "socket.io",
+    "playing",
+    "test",
+    "example",
+    "demo",
+    "poc"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT"
+}
