@@ -2,16 +2,7 @@
   "name": "psocket.io",
   "version": "1.0.0",
   "description": "Playing with Socket.IO",
-  "main": "lib",
   "scripts": {
-    "test": "mocha test"
-  },
-  "pre-commit": [
-    "test"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ysden123/psocket.io.git"
   },
   "keywords": [
     "socket.io",
@@ -22,16 +13,5 @@
     "poc"
   ],
   "author": "Yuriy Stul",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ysden123/psocket.io/issues"
-  },
-  "homepage": "https://github.com/ysden123/psocket.io#readme",
-  "dependencies": {
-    "socket.io": "^1.4.8"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "node-pre-commit": "0.0.3"
-  }
+  "license": "MIT"
 }
