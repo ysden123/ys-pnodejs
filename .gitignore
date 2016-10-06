@@ -42,3 +42,5 @@ node_modules
 test.txt
 test.zip
 /.vscode
+.idea/copyright/profiles_settings.xml
+.idea/
