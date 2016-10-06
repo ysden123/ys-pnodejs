@@ -41,3 +41,4 @@ node_modules
 /modules/p_adm_zip/test.zip
 test.txt
 test.zip
+.idea/
