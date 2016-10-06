@@ -11,6 +11,7 @@ describe('Downloader2', function() {
                 console.log('on start:', d);
                 wasStarted = true;
             }))
+            .on('err1')
             .on('end', (d) => {
                 console.log('on end:', d);
                 if (wasStarted) {
