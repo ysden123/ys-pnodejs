@@ -42,3 +42,6 @@ node_modules
 test.txt
 test.zip
 .idea/
+.vscode/
+datas.json
+modules/report_map/cache.dat
