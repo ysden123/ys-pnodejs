@@ -1,5 +1,6 @@
 'use strict';
 /**
+ * Demonstrates usage of "new target" - if "new" operator was used
  * Created by Yuriy Stul on 1/13/2017.
  */
 function Foo() {

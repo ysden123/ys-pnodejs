@@ -1,5 +1,6 @@
 'use strict';
 /**
+ * Demonstrates usage of default parameter and "...args"
  * Created by Yuriy Stul on 1/13/2017.
  */
 // Default function parameters
