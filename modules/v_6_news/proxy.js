@@ -7,6 +7,8 @@
  *
  * Allows to extend an object behavior. This is metaprogramming instrument
  *
+ * Doesn't work on NodeJs 4.
+ *
  * Created by Yuriy Stul on 1/13/2017.
  */
 'use strict';

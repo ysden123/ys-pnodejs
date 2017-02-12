@@ -1,6 +1,9 @@
 'use strict';
 /**
  * Demonstrates extracting values from constructor - destructing
+ *
+ * Doesn't work on NodeJs 4.
+ *
  * Created by Yuriy Stul on 1/13/2017.
  */
 const x = [1, 2, 3, 4, 5];

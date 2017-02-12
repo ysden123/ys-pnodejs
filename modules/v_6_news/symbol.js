@@ -5,6 +5,7 @@
  * Symbol may be used as identifier for object properties.
  * Symbol is wrapper for primitive symbol type.
  *
+ * Doesn't work on NodeJs 4.
  *
  * Created by Yuriy Stul on 1/13/2017.
  */
@@ -15,11 +16,11 @@ const s2 = Symbol("s1");
 console.log(s1 == s2);       // false
 console.log(s1 === s2);      // false
 
-const COLOR_RED    = Symbol('Red');
+const COLOR_RED = Symbol('Red');
 const COLOR_ORANGE = Symbol('Orange');
 const COLOR_YELLOW = Symbol('Yellow');
-const COLOR_GREEN  = Symbol('Green');
-const COLOR_BLUE   = Symbol('Blue');
+const COLOR_GREEN = Symbol('Green');
+const COLOR_BLUE = Symbol('Blue');
 const COLOR_VIOLET = Symbol('Violet');
 
 function getComplement(color) {
@@ -37,16 +38,16 @@ function getComplement(color) {
         case COLOR_VIOLET:
             return COLOR_YELLOW;
         default:
-            throw new Exception('Unknown color: '+color);
+            throw new Exception('Unknown color: ' + color);
     }
 }
 
 console.log('getComplement(COLOR_RED):');
 console.log(getComplement(COLOR_RED));
-try{
+try {
     console.log("getComplement(Symbol('Red')):");
     console.log(getComplement(Symbol('Red')));
-}catch(e){
+} catch (e) {
     console.log('***Error:', e);
 }
 
