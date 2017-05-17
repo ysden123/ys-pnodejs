@@ -24,5 +24,10 @@
     "hazelcast-client": "^0.3.0",
     "async": "^2.0.0-rc.6"
   },
+  "devDependencies": {
+    "chai": "",
+    "sinon": "",
+    "simple-node-logger": ""
+  },
   "homepage": "https://github.com/ysden123/ys-pnodejs#readme"
 }
