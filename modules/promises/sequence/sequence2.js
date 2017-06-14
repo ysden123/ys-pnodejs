@@ -3,6 +3,9 @@
  */
 'use strict';
 
+/**
+ * Ignore error
+ */
 function test1(n) {
     let items = [];
     for (let i = 1; i <= n; ++i) {
@@ -33,16 +36,21 @@ function job1(i) {
     })
 }
 
+/**
+ * Stop execution after 1st error
+ */
 function test2(n) {
     let items = [];
     for (let i = 1; i <= n; ++i) {
         items.push(i)
     }
 
+    let errorOccurred = false;
     return items.reduce((promise, item) => promise
-        .then(() => job2(item))
+        .then(() => (!errorOccurred ? job2(item) : Promise.resolve()))
         .catch(err => {
             // console.log(`Occurred error ${err.message}`);
+            errorOccurred = true;
             return Promise.reject(err)
         }), Promise.resolve());
 }
@@ -74,3 +82,15 @@ test1(10)
     .catch(err => {
         console.log(`Total error: ${err.message}`);
     });
+
+// test2(10)
+//     .then(() => {
+//         console.log(`Completed test2\n`);
+//         return test1(10)
+//     })
+//     .then(() => {
+//         console.log(`Completed test1`);
+//     })
+//     .catch(err => {
+//         console.log(`Total error: ${err.message}`);
+//     });
