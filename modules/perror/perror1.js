@@ -10,7 +10,7 @@ try{
 catch(err){
     console.log(util.inspect(err,{ showHidden: true, depth: true }));
 }
-
+console.log('-----------');
 try{
     throw "error text 2"
 }
