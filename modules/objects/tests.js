@@ -1,10 +1,10 @@
 // Playing with objects
 'use strict';
 
-var util = require('util');
+let util = require('util');
 
-var v1 = "the v1's value";
-var v2 = "the v2's value";
+let v1 = "the v1's value";
+let v2 = "the v2's value";
 
 function f1(o){
     console.log(util.inspect(o));
