@@ -2,6 +2,7 @@
  * Copyright (c) 2017. Yuriy Stul 
  */
 'use strict';
+// Descending sort
 let dates = [];
 dates.push(new Date());
 setTimeout(()=>{
