@@ -7,6 +7,12 @@ function foo() {
     });
 }
 
+function foo2() {
+    return new Promise((resolve) => {
+        resolve();
+    });
+}
+
 foo()
     .then(() => console.log('In then 1'))
     .catch((e) => {
@@ -27,3 +33,8 @@ foo()
         console.log('In promise catch 21:', e);
     })
     .then(() => console.log('In then 21'));
+
+foo2()
+    .then(() => console.log('In then 201'))
+    .catch(() => console.log('In catch 202'))
+    .then(() => console.log('In then 203'));
