@@ -2,7 +2,7 @@
 'use strict';
 
 function foo() {
-    return new Promise((resolve, reject) => {
+    return new Promise(() => {
         throw new Error('The test exception');
     });
 }
@@ -15,7 +15,8 @@ foo()
     })
     .catch((e) => {
         console.log('In promise catch 2:', e);
-    });
+    })
+    .then(() => console.log('In then 11'));
 
 foo()
     .then(() => {
@@ -24,5 +25,5 @@ foo()
     })
     .catch((e) => {
         console.log('In promise catch 21:', e);
-
-    });
+    })
+    .then(() => console.log('In then 21'));
