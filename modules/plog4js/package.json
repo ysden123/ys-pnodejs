@@ -1,0 +1,18 @@
+{
+  "name": "plog4js",
+  "version": "1.0.0",
+  "description": "Usage of log4js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "log4js"
+  ],
+  "author": "Yuriy Stul",
+  "license": "MIT",
+  "dependencies": {
+    "log4js": "^6.1.0"
+  }
+}

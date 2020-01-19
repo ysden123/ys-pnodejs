@@ -45,3 +45,5 @@ test.zip
 .vscode/
 datas.json
 modules/report_map/cache.dat
+
+*.iml
